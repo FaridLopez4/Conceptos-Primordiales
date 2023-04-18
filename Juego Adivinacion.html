@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<h1>JUEGO DE ADIVINACION</h1>
+<script>
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var numeroAleatorio=Math.round(Math.random()*10);
+	var intentos=3;
+	var contador=1;
+
+	while (contador<=intentos){
+		var numeroLanzado=parseInt(prompt("Ingrese un numero del 0-10"));
+
+		if(numeroLanzado==numeroAleatorio){
+			alert("Usted acerto en el intento "+intentos+", el numero aleatorio era: "+numeroAleatorio);
+			break;
+		}
+
+		else{
+			alert("Usted fallo, intenta con otro");
+		}
+		contador++;
+	}
+	imprimir("El numero aleatorio es: "+numeroAleatorio);
+	imprimir("FIN");
+
+</script>
