@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<h1>PROMEDIO DE IMC</h1>
+<script>
+	function imprimir(frase){
+		document.write(frase);
+		document.write("<br>");
+	}
+	function calcularImc(peso,altura){
+		imc=peso/(altura*altura)
+		return imc;
+	}
+	nombreInformado=prompt("Ingrese su nombre:");	
+
+	pesoInformado=prompt("Ingrese su peso: ")
+	
+	alturaInformado=prompt("Ingrese su altura en metros:");
+	
+	imcCalculado=calcularImc(pesoInformado,alturaInformado);
+	
+	imprimir(+nombreInformado+" su imc calculado es: "+imcCalculado);
+
+	if (imcCalculado<18.5) {
+		imprimir("IMC bajo")	
+	}
+
+	if (imcCalculado>=18.5 && imcCalculado<25) {
+		imprimir("IMC normal");
+	}
+
+	if (imcCalculado>=25 && imcCalculado<30) {
+		imprimir("IMC en sobrepeso");
+	}
+
+	if (imcCalculado>30) {
+		imprimir("IMC en obesidad");
+	}
+</script>
