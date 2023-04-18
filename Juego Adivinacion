@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<h1>JUEGO DE ADIVINACION</h1>
+<script>
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var numeroAleatorio=Math.round(Math.random()*10);
+	var numeroUsuario=parseInt(prompt("Ingrese un numero al azar entre 0-10"));
+
+	if (numeroAleatorio==numeroUsuario) {
+		imprimir("El numero aleatorio es: "+numeroAleatorio);
+		imprimir("USTED HA ACERTADO EL NUMERO");
+	} 
+
+	else {
+		imprimir("El numero aleatorio es: "+numeroAleatorio);
+		imprimir("NO HA ACERTADO EL NUMERO");
+	}
+
+</script>
